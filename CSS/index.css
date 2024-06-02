@@ -1,0 +1,118 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../פיתוח-משחקי1-מחשב.jpg");
+  background-size: cover;
+  Background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#h1,
+h2 {
+  color: #fbff04;
+  font-size: 70px;
+}
+#start {
+  font-size: 40px;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  color: rgb(225, 255, 0);
+  background-color: black;
+  width: 250px;
+}
+#start:hover {
+  background-color: #fbff04;
+  color: #000;
+}
+.login{
+  width: px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #859bc699;
+  border-radius: 10px;
+  text-align: center;
+  display:none;
+}
+.open{
+  padding: 10px 20px;
+  font-size: 25px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+h4{
+  color: #fbff04;
+  font-size: 70px;
+}
+.container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #859bc699;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+#h1from {
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 0 0 13px rgb(113, 3, 128);
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.form-all {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.label{
+  color: yellow;
+  font-weight: bolder; 
+  font-size: 20px;
+margin-bottom: 5px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#submit {
+  padding: 10px 20px;
+  font-size: 25px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#submit:hover{
+  background-color: #fbff04;  
+  color: #000;
+  font-weight: bolder;
+
+}
+button:hover {
+  background-color: #0056b3;
+}
+#message {
+  font-style:italic;
+  color: #888;
+}
+

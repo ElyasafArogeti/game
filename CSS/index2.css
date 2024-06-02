@@ -1,0 +1,75 @@
+*{
+top: 0;
+box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url("../פיתוח-משחקי1-מחשב.jpg");
+    background-size: cover;
+    Background-attachment: fixed:
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#h1,h2{
+    color: #fbff04;
+    font-size: 35px;
+    top: 0;
+}
+.main{
+   
+}
+#p{
+    position: fixed;
+ left: 0;
+    color: #fbff04;
+    font-size: 25px;
+}
+#span{
+    font-size: 25px;
+    color: #fbff04;
+}
+.main .ing{
+display: none;
+}
+#start{
+    padding: 10px 20px;
+    font-size:30px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: yellow;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+#start:hover{
+    background-color: #000000;
+    color: yellow;
+}
+#input{
+    width: 35%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: yellow;
+    /* position: relative;
+    top: 230px; */
+    display: none;
+}
+#arr{
+    color: yellow;
+    font-size: 30px;
+}
+#submit{
+    padding: 10px 20px;
+    font-size: 25px;
+    width: 25%;
+    border-radius: 5px;
+    background-color: yellow;
+    color: #000000;
+    cursor: pointer;
+    display: none;
+}
