@@ -37,13 +37,14 @@ function startGame () {
       imges.innerHTML = "";       // לנקות את התמונות הקודמות
       let temp = document.createElement("img")//יצירת תמונה לסדר המערך
       temp.src = arr[index];
-      temp.style.width = `400px`;
-      temp.style.height = `300px`;
+      temp.style.width = `350px`;
+      temp.style.height = `250px`;
       temp.classList.add("border");
       imges.append(temp);
   }
   function showtextNachsh(index) { // טקסט אותיות ניחוש 
      textNachsh.innerText = arrNachsh[index];
+     textNachsh.style.fontSize= `30px`;
   }
 
   submit.addEventListener("click", checkGuess);//לחיצה לאחר ניחוש
@@ -54,22 +55,24 @@ function startGame () {
    Timeisup.style.display="none";
    if (check(userGuess, arrname[ImageIndex])){//אם התשובה נכונה 
        console.log("ניחוש נכון");
+       clearInterval(timer);//עצירת השעון 
        let temp = document.createElement("img");//רוצה להעלות 4 שניות את התמונה המקורית ולהמשיך במשחק
        temp.src = arrimgLeft[ImageIndex];
-       temp.style.width = "500px";
-       temp.style.height = "400px";
+       temp.style.width = "350px";
+       temp.style.height = "250px";
        imges.innerHTML="";
        imges.append(temp);
         message.style.display="block";   // תשובה נכונה  
         message.innerText="  👍 תשובה נכונה : כל הכבוד - עוברים לשלב הבא 👍"
          message.classList.add(".textNachsh");// הוספת קלאס להודעה 
-
+       
    let x=  setTimeout (()=> {
     nextlevel.style.display="none";
       Timeisup.style.display="none";
         message.style.display = "none";
         imges.innerHTML = "";
          ImageIndex++;
+         startTimer()
  if (ImageIndex < arr.length && arr[ImageIndex]) {
            showImage(ImageIndex);
            showtextNachsh(ImageIndex);
@@ -95,11 +98,13 @@ function startGame () {
 }
 function check(value1, value2) {
    return value1 === value2;
-}
+} 
+let timer;
 function startTimer() {     //פונקציית הטיימר 
-    let timeLeft = 60;
+
+    let timeLeft  = 60;
     timerElement.innerText = timeLeft;//תיימר התחלתי 
-    let timer= setInterval(()=>{
+   timer = setInterval(()=>{
         timeLeft--;
         timerElement.innerText = timeLeft;//מוריד את טיימר המוצג
         if (timeLeft <= 0) {//כשהזמן ניגמר
@@ -121,11 +126,10 @@ function startTimer() {     //פונקציית הטיימר
             } else { 
                 nextlevel.style.display="block";
                 Timeisup.style.display="block";
-               
+
                 submit.style.display="block";
                 input.style.display="block";
-                textNachsh.innerText=arrname[ImageIndex];
-              x()
+                textNachsh.innerText = arrname[ImageIndex];
             }
         }
     }, 1000);

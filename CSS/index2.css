@@ -22,7 +22,7 @@ body{
 }
 #p{
     position: fixed;
- left: 3px;
+ left: 15px;
  top: 100px;
     color: #fbff04;
     font-size: 30px;
@@ -118,4 +118,49 @@ input::placeholder {
    
     color: #000000;
     display: none;
+}
+@media only screen and (max-width: 412px){
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    #h1, h2 {
+        font-size: 35px;
+    }
+    #p {
+        font-size: 20px;
+    }
+    #span {
+        font-size: 20px;
+    }
+    #start {
+        font-size: 20px;
+        width: 200px;
+    }
+    #input {
+        width: 80%;
+        font-size: 14px;
+    }
+    input::placeholder {
+        font-size: 16px;
+    }
+    #arr, #textNachsh {
+        font-size: 20px;
+    }
+    #submit {
+        font-size: 20px;
+        width: 80%;
+    }
+    #user-score {
+        font-size: 24px;
+    }
+    #Timeisup {
+        font-size: 20px;
+    }
+    #next-level {
+        font-size: 20px;
+    }
+
+
+    
 }
