@@ -6,8 +6,10 @@ body{
     width: 100%;
     height: 100%;
     background-image: url("../פיתוח-משחקי1-מחשב.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    Background-attachment: fixed:
+    Background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,14 +20,12 @@ body{
     font-size: 35px;
     top: 0;
 }
-.main{
-   
-}
 #p{
     position: fixed;
- left: 0;
+ left: 3px;
+ top: 100px;
     color: #fbff04;
-    font-size: 25px;
+    font-size: 30px;
 }
 #span{
     font-size: 25px;
@@ -55,13 +55,27 @@ display: none;
     border-radius: 5px;
     border: 1px solid #000000;
     background-color: yellow;
-    /* position: relative;
-    top: 230px; */
     display: none;
+}
+input::placeholder {
+    font-size: 22px; /* גודל גופן של ה-placeholder */
+    direction: rtl;  /* כיווניות מימין לשמאל */
+    text-align: right; /* יישור טקסט לימין */
+    Font-weight : bold;
+}
+#input:hover{
+    background-color: #000000;
+    color: yellow;
 }
 #arr{
     color: yellow;
     font-size: 30px;
+    display: none;
+}
+#textNachsh{
+    font-size: 33px;
+    color: yellow;
+    Font-weight : bold;
 }
 #submit{
     padding: 10px 20px;
@@ -71,5 +85,37 @@ display: none;
     background-color: yellow;
     color: #000000;
     cursor: pointer;
+    display: none;
+}
+#submit:hover{
+    background-color: #000000;
+    color: yellow;
+}
+.border{
+    border: 1px solid rgb(233, 233, 160);
+    border-radius: 10px;
+}
+#user-score{
+    position: fixed;
+    left: 2;
+    top: 100px;
+       color: #fbff04;
+       font-size: 30px;
+       Font-weight : bold;
+}
+#Timeisup{
+    font-size: 30px;
+    color: yellow;
+    Font-weight : bold;
+    text-align: center;
+       display: none;
+}
+#next-level{
+    padding: 10px 20px;
+    font-size: 25px;
+    width: 100%;
+    border-radius: 5px;
+   
+    color: #000000;
     display: none;
 }

@@ -7,10 +7,11 @@ document.querySelector("#start").addEventListener("click", function () {
   container.style.display = "none";
   login.style.display = "block";
 
-     document.querySelector("#login-submit").addEventListener("click", function () {  //שלא רשום
+     document.querySelector("#login-submit").addEventListener("click", function () {  //לחיצה על להירשם
       container.style.display = "block";
       login.style.display = "none";
 
+      document.querySelector("#submit").addEventListener("click", function() { // לחיצה על שליחה אחרי הרישום   
       const inputname = document.querySelector("#name"); //שם
       let name = inputname.value.trim();
 
@@ -24,15 +25,10 @@ document.querySelector("#start").addEventListener("click", function () {
             email: email,
             password: password,
           }
-         localStorage.setItem(name, JSON.stringify(personGame)); 
-
-      document.querySelector("#submit").addEventListener("click", function() { //לחיצה על שליחה לא רשום
-        const inputname = document.querySelector("#name").value;
-        const inputemail = document.querySelector("#email").value;
-        const inputpassword = document.querySelector("#password").value;
-       if(inputname&&inputemail&&inputpassword){
+       if(name && email && password){
+          localStorage.setItem( name, JSON.stringify(personGame));
         alert("הטופס נשלח בהצלחה בואו נשחק");
-          window.location.href = "./index2.html";
+          window.location.href = "../Html/index2.html";
        }else{ 
         alert(" אנא מלאו את השדות הנדרשים");
        }
@@ -40,10 +36,10 @@ document.querySelector("#start").addEventListener("click", function () {
     });
 
   document.querySelector("#login-open").addEventListener("click", function () {//כניסת לקוח רשום למערכת ובדיקה אם קיים כבר
-    //כאשר נרשם
-    const loginName = document.querySelector("#login-name").value.trim();
 
-     const loginPassword = document.querySelector("#login-password").value.trim();
+    const loginName = document.querySelector("#login-name").value.trim();//ערך המשתמש
+
+     const loginPassword = document.querySelector("#login-password").value.trim();//ערך הסיסמא 
     if (loginName && loginPassword) {
       const storedUser = localStorage.getItem(loginName);
       if (storedUser) {
@@ -51,7 +47,7 @@ document.querySelector("#start").addEventListener("click", function () {
 
         if (user.password === loginPassword) {
           alert("התחברת בהצלחה!");
-          window.location.href = "./index2.html";
+          window.location.href = "../Html/index2.html";
         } else {
           alert("סיסמא שגויה");
         }
