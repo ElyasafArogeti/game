@@ -1,6 +1,7 @@
 
 let start = document.querySelector("#start");// מחזיק כפתור התחלה
 let imges = document.querySelector(".img");// מיקום התמונה לפי סדר
+let divp = document.querySelector("#divp");// מיקום התמונה לפי סדר
 let textNachsh = document.querySelector("#textNachsh");//טקסט אותיות ניחוש
 let input = document.querySelector("#input");//הטקסט שמזין המשתמש
 let submit = document.querySelector("#submit");//שליחה לפני ניחוש 
@@ -8,6 +9,7 @@ let message = document.querySelector("#arr");//הודעה עם טעה או צד�
 let timerElement = document.querySelector("#span");// אלמנט הזמן
 let  Timeisup  =document.querySelector("#Timeisup");//הודעת ניגמר הזמן 
 let nextlevel = document.querySelector("#next-level");//כפתור להמשיך במשחק
+
 let score = 100; // ניקוד התחלתי
 let  userScoreDiv = document.querySelector("#user-score");//ניקוד המשתמש
 let userScore = parseInt(sessionStorage.getItem("userScore")) || 100;
@@ -27,6 +29,8 @@ function startGame () {
    input.style.display="block";
    submit.style.display="block";
      start.style.display="none";
+     divp.style.display="none";
+
 
      showImage(ImageIndex);//הצגת תמונה לפי סדר 
     showtextNachsh(ImageIndex);//הצגת טקסט ניחוש
@@ -62,9 +66,10 @@ function startGame () {
        temp.style.height = "250px";
        imges.innerHTML="";
        imges.append(temp);
-        message.style.display="block";   // תשובה נכונה  
-        message.innerText="  👍 תשובה נכונה : כל הכבוד - עוברים לשלב הבא 👍"
-         message.classList.add(".textNachsh");// הוספת קלאס להודעה 
+     message.style.display="block";   // תשובה נכונה  
+     message.innerText= " 👍 תשובה נכונה : עוברים לשלב הבא 👍"
+      message.classList.add(".textNachsh");// הוספת קלאס להודעה 
+      message.style.fontSize="25px";
        
    let x=  setTimeout (()=> {
     nextlevel.style.display="none";

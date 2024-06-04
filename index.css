@@ -20,7 +20,7 @@ main {
 #h1,
 h2 {
   color: #fbff04;
-  font-size: 70px;
+  font-size: 45px;
 }
 #start {
   font-size: 40px;
@@ -56,7 +56,7 @@ h2 {
 }
 h4{
   color: #fbff04;
-  font-size: 70px;
+  font-size: 45px;
 }
 .container {
   width: 600px;
@@ -88,7 +88,7 @@ h4{
 margin-bottom: 5px;
 }
 input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
@@ -117,7 +117,7 @@ button:hover {
   font-style:italic;
   color: #888;
 }
-@media only screen and (max-width: 412px){
+@media only screen and (max-width: 413px){
   body {
     width: 100%;
     height: 100%;
@@ -131,19 +131,20 @@ button:hover {
     align-items: center;
     flex-direction: column;
   }
-  
   #h1,
-  h2,
   h4 {
     color: #fbff04;
     font-size: 40px;
   }
-  
+  h2{
+    color: #fbff04;
+    font-size: 35px;
+  }
   #start,
   .open,
   #submit {
-    font-size: 25px;
-    border-radius: 10px;
+    font-size: 23px;
+    border-radius: 90px;
     padding: 10px;
     cursor: pointer;
   }
@@ -153,7 +154,6 @@ button:hover {
     background-color: #fbff04;
     color: #000;
   }
-  
   .login,
   .container {
     width: 290px;
@@ -163,18 +163,16 @@ button:hover {
     border-radius: 10px;
     text-align: center;
   }
-  
   .label {
     color: yellow;
     font-weight: bolder;
     font-size: 20px;
     margin-bottom: 5px;
   }
-  
   input {
     width: 80%;
     padding: 10px;
-    font-size: 10px;
+    font-size: 13px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }

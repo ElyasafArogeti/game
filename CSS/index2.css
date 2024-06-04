@@ -20,13 +20,6 @@ body{
     font-size: 35px;
     top: 0;
 }
-#p{
-    position: fixed;
- left: 15px;
- top: 100px;
-    color: #fbff04;
-    font-size: 30px;
-}
 #span{
     font-size: 25px;
     color: #fbff04;
@@ -96,29 +89,57 @@ input::placeholder {
     border-radius: 10px;
 }
 #user-score{
-    position: fixed;
-    left: 2;
-    top: 100px;
        color: #fbff04;
        font-size: 30px;
        Font-weight : bold;
 }
 #Timeisup{
-    font-size: 30px;
+    width: 350px;
+    font-size: 20px;
     color: yellow;
     Font-weight : bold;
     text-align: center;
        display: none;
 }
 #next-level{
-    padding: 10px 20px;
-    font-size: 25px;
-    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    width:100%;
     border-radius: 5px;
-   
     color: #000000;
+    background-color: red;
     display: none;
 }
+#p{
+    color: #fbff04;
+    font-size: 30px;
+  }
+  #divp{
+        width: 500px; 
+        padding: 18px; 
+        background-color: #cdecf4; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        opacity: 0.8;
+        direction: rtl;
+      }
+      #divp li{
+        font-size: 18px;
+      }
+      #divp h1{
+        color: #000;
+        text-align: center;
+         font-size: 35px;
+         text-shadow: 0 0 15px rgb(234, 255, 4);
+          font-weight: bolder;
+         font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      #divp h3{
+        font-size: 18px;
+      }
+      
 @media only screen and (max-width: 412px){
     body {
         flex-direction: column;
@@ -160,7 +181,18 @@ input::placeholder {
     #next-level {
         font-size: 20px;
     }
-
-
+    #divp{
+        width: 370px; 
+      }
+      #divp li{
+        font-size: 16px;
+      }
+      #divp h1{
+         font-size: 25px;
+      }
+      #divp h3{
+        font-size: 16px;
+        text-align: center;
+      }
     
 }

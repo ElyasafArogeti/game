@@ -40,21 +40,23 @@ document.querySelector("#start").addEventListener("click", function () {
     const loginName = document.querySelector("#login-name").value.trim();//ערך המשתמש
 
      const loginPassword = document.querySelector("#login-password").value.trim();//ערך הסיסמא 
+     
     if (loginName && loginPassword) {
-      const storedUser = localStorage.getItem(loginName);
-      if (storedUser) {
-        const user = JSON.parse(storedUser);
+      const storedUser = localStorage.getItem(loginName);//לפי שם משתמש
+      if (storedUser) { //אם קיים
+        const user = JSON.parse(storedUser);//תביא את כל הנתונים שלו
 
         if (user.password === loginPassword) {
           alert("התחברת בהצלחה!");
+          console.log(window);
           window.location.href = "../Html/index2.html";
-        } else {
+        } else {//משתמש קיים סיסמא שגוייה
           alert("סיסמא שגויה");
         }
-      } else {
+      } else {// שהמשתמש לא נימצא 
         alert("משתמש לא נמצא");
       }
-    } else {
+    } else { //לא ניכתב כלום 
       alert("אנא מלא את כל השדות");
     }
   });
