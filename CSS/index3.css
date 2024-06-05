@@ -23,9 +23,9 @@
         font-size: 45px;
       }
       #logogame1{
-        width: 95%;
+        width:230px;
         height: 100%;
-        border: 2px solid yellow;
+       
       }
       .games{
         width: 500px;
@@ -35,14 +35,58 @@
         justify-content:space-between;
         align-items: center;
       }
+      #gem1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #gem2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #div2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column
+
+      }
+      #startButton1 {
+        padding: 10px 20px;
+        font-size: 25px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: yellow;
+        color: #000000;
+        cursor: pointer;
+      }
+      #startButton2{
+        padding: 10px 20px;
+        font-size: 25px;
+        width: 100%;
+        border-radius: 5px;
+        background-color: yellow;
+        color: #000000;
+        cursor: pointer;
+      }
+      h4{
+        color: #fbff04;
+        font-size: 30px;
+      }
       @media only screen and (max-width: 413px){
         .games{
             width: 300px;
             font-size: 20px;
         } 
-
-
-
-
+        #logogame1{
+          width:150px;
       }
-    
+      #startButton1 , #startButton2{
+        font-size: 16px;
+        padding: 9px 9px;
+        font-size: 17px;
+      }
+      }

@@ -2,7 +2,10 @@ let main = document.querySelector(".main"); //התחלה
 let container = document.querySelector(".container"); //טופס הרשמה
 let login = document.querySelector(".login"); //טופס כניסה לקיים
 let submit = document.querySelector("#submit"); //כפטור הרשמה
+let divalert = document.querySelector("#alert");
+
 document.querySelector("#start").addEventListener("click", function () {
+  
   main.style.display = "none";
   container.style.display = "none";
   login.style.display = "block";
@@ -27,10 +30,18 @@ document.querySelector("#start").addEventListener("click", function () {
           }
        if(name && email && password){
           localStorage.setItem( name, JSON.stringify(personGame));
-        alert("הטופס נשלח בהצלחה בואו נשחק");
-          window.location.href = "../Html/index2.html";
+          divalert.style.display="block";
+          divalert.style.color="yellow";
+          divalert.innerHTML="טופס נשלח בהצלחה בואו נשחק";
+          setTimeout (()=> {
+            window.location.href="./Html/index3.html?userName=" + name;
+       }, 2000);
        }else{ 
-        alert(" אנא מלאו את השדות הנדרשים");
+        divalert.innerHTML="אנא מלא את כל השדות";
+        divalert.style.display="block";
+      setTimeout (()=>{
+        divalert.style.display="none";
+    }, 2000);
        }
       });
     });
@@ -45,19 +56,35 @@ document.querySelector("#start").addEventListener("click", function () {
       const storedUser = localStorage.getItem(loginName);//לפי שם משתמש
       if (storedUser) { //אם קיים
         const user = JSON.parse(storedUser);//תביא את כל הנתונים שלו
-
+        let nameuser =user.name; 
         if (user.password === loginPassword) {
-          alert("התחברת בהצלחה!");
-          console.log(window);
-          window.location.href = "../Html/index2.html";
+          divalert.style.display="block";
+           divalert.innerHTML = "התחברת בהצלחה בוא נשחק"; 
+           divalert.style.color="yellow";
+          setTimeout (()=> {
+            window.location.href="./Html/index3.html?userName="+nameuser;
+        }, 2000);
         } else {//משתמש קיים סיסמא שגוייה
-          alert("סיסמא שגויה");
+          divalert.innerHTML = " הסיסמא שגוייה ";
+          divalert.style.display="block";
+      setTimeout (()=>{
+        divalert.style.display="none";
+    }, 2000);
         }
       } else {// שהמשתמש לא נימצא 
-        alert("משתמש לא נמצא");
+        divalert.innerHTML=" משתמש לא נימצא ";
+        divalert.style.display="block";
+      setTimeout (()=>{
+        divalert.style.display="none";
+    }, 2000);
       }
     } else { //לא ניכתב כלום 
-      alert("אנא מלא את כל השדות");
+        divalert.innerHTML="אנא מלא את כל השדות";
+        divalert.style.display="block";
+      setTimeout (()=>{
+        divalert.style.display="none";
+    }, 2000);
+      
     }
   });
 });

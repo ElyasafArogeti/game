@@ -44,17 +44,19 @@ display: none;
 #input{
     width: 35%;
     padding: 10px;
-    font-size: 16px;
+    font-size:25px;
     border-radius: 5px;
     border: 1px solid #000000;
     background-color: yellow;
     display: none;
+    direction: rtl;  
 }
 input::placeholder {
-    font-size: 22px; /* גודל גופן של ה-placeholder */
+    font-size: 30px; /* גודל גופן של ה-placeholder */
     direction: rtl;  /* כיווניות מימין לשמאל */
     text-align: right; /* יישור טקסט לימין */
     Font-weight : bold;
+
 }
 #input:hover{
     background-color: #000000;
@@ -64,11 +66,17 @@ input::placeholder {
     color: yellow;
     font-size: 30px;
     display: none;
+    color: black;
+    Font-weight : bold;
+    background-color: yellowgreen;
+    padding: 15px;
+    border-radius:10px;
 }
 #textNachsh{
     font-size: 33px;
     color: yellow;
     Font-weight : bold;
+
 }
 #submit{
     padding: 10px 20px;
@@ -142,6 +150,7 @@ input::placeholder {
       
 @media only screen and (max-width: 412px){
     body {
+        width: 98%;
         flex-direction: column;
         align-items: center;
     }
@@ -160,14 +169,18 @@ input::placeholder {
     }
     #input {
         width: 80%;
-        font-size: 14px;
+        font-size: 18px;
     }
     input::placeholder {
-        font-size: 16px;
+        font-size: 18px;
     }
-    #arr, #textNachsh {
+    #textNachsh {
         font-size: 20px;
     }
+     #arr{
+        font-size: 16px;
+        margin: 5px;
+     }
     #submit {
         font-size: 20px;
         width: 80%;
@@ -188,11 +201,11 @@ input::placeholder {
         font-size: 16px;
       }
       #divp h1{
-         font-size: 25px;
+         font-size: 23px;
       }
       #divp h3{
         font-size: 16px;
-        text-align: center;
+      
       }
     
 }
