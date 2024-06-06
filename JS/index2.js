@@ -30,7 +30,7 @@ document.querySelector("#start").addEventListener("click",startGame);
 
 
 let ImageIndex = Math.floor(Math.random()*26);//מספל רנדומלי המציג תמונות 
-
+console.log(ImageIndex);
 function startGame () {
 
 const arrIndex = [];//שמירת האינדקס המורל שלא יחזור שוב
@@ -91,12 +91,17 @@ arrIndex.push(ImageIndex);//להכניס למערך
       Timeisup.style.display="none";
         message.style.display = "none";
         imges.innerHTML = "";
-        ImageIndex = Math.floor(Math.random()*26);//להגריל שוב אינדקס נוסף
-           arrIndex.push(ImageIndex);//להכניס למערך
-        while(arrIndex.indexOf(ImageIndex)!=-1){//אם האינדקס נמצא במערך זה אומר שהתמונה יוצגה כבר
-            ImageIndex = Math.floor(Math.random()*26);
-        }
+  ImageIndex = Math.floor(Math.random()*26);//להגריל שוב אינדקס נוסף
       
+          for(let el of arrIndex){
+            if(el===ImageIndex){
+                console.log("noo");
+                ImageIndex = Math.floor(Math.random()*26);
+            }
+          }
+             arrIndex.push(ImageIndex);//להכניס למערך
+      console.log(ImageIndex);
+      console.log(arrIndex);
          startTimer()
  if (ImageIndex < arr.length && arr[ImageIndex]) {
            showImage(ImageIndex);
