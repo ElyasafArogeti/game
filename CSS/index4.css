@@ -80,7 +80,7 @@ flex-direction: column;
     width: 600px;
     height: 70px;
     font-size: 50px;
-   background-color: antiquewhite;
+   background-color: rgb(220, 226, 105);
    display: none;
    text-align: center;
   }
@@ -93,15 +93,30 @@ flex-direction: column;
     display: none;
     cursor: pointer;
   }
-  @media only screen and (max-width: 412px){
+  .img{
+    width: 35px;
+    height: 35px;
+  }
+  a{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: yellow;
+    font-size: 20px;
+     position: absolute;
+     top: 3px;
+    right: 20px;
+     }
+  @media only screen and (max-width: 413px){
   body{
 width: 98%;
   }
     #divp {
-      width: 357px; 
+      width: 350px; 
   }
   #divp h1{
-    font-size: 27px;
+    font-size: 24px;
   }
   #h1 {
       font-size: 30px;
@@ -123,11 +138,11 @@ width: 98%;
   }
   #result {
       width: 95%;
-      font-size: 35px;
+      font-size: 32px;
   }
   #reset {
-      font-size: 20px;
-      padding: 5px;
+      font-size: 25px;
+      padding: 9px;
   }
   
 }

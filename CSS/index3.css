@@ -25,6 +25,7 @@
       #logogame1{
         width:230px;
         height: 100%;
+        Cursor: pointer;
        
       }
       .games{
@@ -76,13 +77,20 @@
         color: #fbff04;
         font-size: 30px;
       }
+
       @media only screen and (max-width: 413px){
+        body{
+          width: 95%;
+            }
         .games{
             width: 300px;
             font-size: 20px;
         } 
         #logogame1{
           width:150px;
+      }
+      #h1{
+        font-size: 40px;
       }
       #startButton1 , #startButton2{
         font-size: 16px;
