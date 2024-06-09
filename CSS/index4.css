@@ -113,10 +113,10 @@ flex-direction: column;
 width: 98%;
   }
     #divp {
-      width: 350px; 
+      width: 320px; 
   }
   #divp h1{
-    font-size: 24px;
+    font-size: 20px;
   }
   #h1 {
       font-size: 30px;
@@ -137,8 +137,13 @@ width: 98%;
     display: none;
   }
   #result {
-      width: 95%;
-      font-size: 32px;
+      width: 70%;
+      height: 100%;
+      padding: 16px;
+      border: 2px solid;
+      border-radius: 20px;
+      font-size: 25px;
+      font-weight: bolder;
   }
   #reset {
       font-size: 25px;

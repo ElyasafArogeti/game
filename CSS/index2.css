@@ -203,19 +203,19 @@ input::placeholder {
         font-size: 24px;
     }
     #Timeisup {
-        font-size: 20px;
+        font-size: 16px;
     }
     #next-level {
-        font-size: 20px;
+        font-size: 16px;
     }
     #divp{
-        width: 370px; 
+        width: 320px; 
       }
       #divp li{
         font-size: 16px;
       }
       #divp h1{
-         font-size: 23px;
+         font-size: 19px;
       }
       #divp h3{
         font-size: 16px;

@@ -80,7 +80,7 @@ arrIndex.push(ImageIndex);//להכניס למערך
       message.style.display = "block";   // תשובה נכונה 
       textNachsh.innerText=arrname[ImageIndex];
         message.style.backgroundColor = "yellowgreen";
-           message.style.fontSize = "25px";
+           message.style.fontSize = "17px";
       message.innerText = "👍תשובה נכונה: עוברים לשלב הבא👍"
     //   message.classList.add(".textNachsh");// הוספת קלאס להודעה 
    
